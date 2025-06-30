@@ -1,0 +1,49 @@
+<!--
+Program name: index.html
+Author: Tarek Elshahawi
+Date created: 2025-06-25
+Date last edited: 2025-06-30
+Version: 3.0
+Description: Homework 3 - updated Patient Registrationn Form with JavaScript validation and feedback
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Registration Form - Tarek Medical</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="hw3.js" defer></script>
+</head>
+<body>
+  <div id="header">
+    <img src="TarekMedical.png" alt="Tarek Medical Logo">
+    <h1>Tarek Medical</h1>
+    <p>Today is: <span id="current-date"></span></p>
+  </div>
+
+  <form id="regForm" action="thankyou.html">
+    <h2>Patient Registration Form</h2>
+    <div id="form-errors"></div>
+    <table>
+    </table>
+    <div style="text-align:center">
+      <button type="button" onclick="validateForm()">Validate</button>
+      <button type="reset">Start Over</button>
+      <button type="submit" id="submitBtn" style="display:none">Submit</button>
+    </div>
+  </form>
+
+  <div id="reviewOutput"></div>
+
+  <div id="footer">
+    <p>Tarek Medical | <a href="#">Contact Us</a> | PO BOX 18881, Houston, TX 77450</p>
+  </div>
+
+  <script>
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString(undefined, options);
+  </script>
+</body>
+</html>
