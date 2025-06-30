@@ -1,49 +1,50 @@
 <!--
-Program name: index.html
+Program name: thankyou.html
 Author: Tarek Elshahawi
-Date created: 2025-06-25
-Date last edited: 2025-06-30
+Date created: 2025-06-10
+Last edited: 2025-06-30
 Version: 3.0
-Description: Homework 3 - updated Patient Registrationn Form with JavaScript validation and feedback
+Description: Thank you page for validated patient form submission.
 -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Patient Registration Form - Tarek Medical</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="hw3.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Tarek Medical</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #thank-you-message {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            font-size: 1.2em;
+            text-align: center;
+        }
+    </style>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString(undefined, options);
+      });
+    </script>
 </head>
+
 <body>
-  <div id="header">
-    <img src="TarekMedical.png" alt="Tarek Medical Logo">
-    <h1>Tarek Medical</h1>
-    <p>Today is: <span id="current-date"></span></p>
-  </div>
-
-  <form id="regForm" action="thankyou.html">
-    <h2>Patient Registration Form</h2>
-    <div id="form-errors"></div>
-    <table>
-    </table>
-    <div style="text-align:center">
-      <button type="button" onclick="validateForm()">Validate</button>
-      <button type="reset">Start Over</button>
-      <button type="submit" id="submitBtn" style="display:none">Submit</button>
+    <div id="header">
+        <img src="TarekMedical.png" alt="Tarek Medical Logo">
+        <h1>Tarek Medical</h1>
+        <p>Today is: <span id="current-date"></span></p>
     </div>
-  </form>
 
-  <div id="reviewOutput"></div>
+    <div id="thank-you-message">
+        <h2>Thank you for your submission.</h2>
+        <p>We have received your information and will contact you if needed.</p>
+    </div>
 
-  <div id="footer">
-    <p>Tarek Medical | <a href="#">Contact Us</a> | PO BOX 18881, Houston, TX 77450</p>
-  </div>
-
-  <script>
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById('current-date').textContent = new Date().toLocaleDateString(undefined, options);
-  </script>
+    <div id="footer">
+        <p>Tarek Medical | <a href="#">Contact Us</a> | PO BOX 18881, Houston, TX 77450</p>
+    </div>
 </body>
 </html>
