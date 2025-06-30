@@ -2,7 +2,7 @@
 Program name: style.css
 Author: Tarek Elshahawi
 Date created: 2025-06-04
-Date last edited: 2025-06-30
+Last edited: 2025-06-30
 Version: 3.0
 Description: External styles for Patient Registration Form with error feedback.
 */
@@ -144,6 +144,8 @@ textarea.valid {
     font-size: 0.95em;
     line-height: 1.5;
     border-radius: 6px;
+    max-width: 900px;
+    margin: 20px auto;
 }
 
 #reviewOutput h3 {
@@ -158,4 +160,12 @@ textarea.valid {
 
 #reviewOutput li {
     margin-bottom: 5px;
+}
+
+#thank-you-message {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    font-size: 1.2em;
+    text-align: center;
 }
