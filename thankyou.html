@@ -4,7 +4,7 @@ Author: Tarek Elshahawi
 Date created: 2025-06-10
 Last edited: 2025-06-30
 Version: 3.0
-Description: Thank you page for validated patient form submission.
+Description: Thank you page for patient form submission.
 -->
 
 <!DOCTYPE html>
@@ -23,6 +23,12 @@ Description: Thank you page for validated patient form submission.
             text-align: center;
         }
     </style>
+    <script defer>
+      document.addEventListener("DOMContentLoaded", () => {
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString(undefined, options);
+      });
+    </script>
 </head>
 
 <body>
@@ -31,11 +37,6 @@ Description: Thank you page for validated patient form submission.
         <h1>Tarek Medical</h1>
         <p>Today is: <span id="current-date"></span></p>
     </div>
-
-    <script>
-        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-        document.getElementById('current-date').textContent = new Date().toLocaleDateString(undefined, options);
-    </script>
 
     <div id="thank-you-message">
         <h2>Thank you for your submission.</h2>
